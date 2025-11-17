@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Corporación Guajira Post‑Carbón</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<header class="navbar">
+    <div class="navbar-container">
+        <div class="navbar-logo">
+            <img src="logoP.jpg" alt="Logo" class="logo-navbar">
+            <span>CORPORACIÓN GUAJIRA POST CARBON</span>
+        </div>
+
+        <div class="hamburger" id="hamburger">☰</div>
+
+        <nav class="nav-menu" id="navMenu">
+            <a href="#articulo">Artículo del día</a>
+            <a href="#quienes">¿Quiénes somos?</a>
+            <a href="#vision">Visión</a>
+            <a href="#mision">Misión</a>
+            <a href="#objetivos">Objetivos</a>
+            <a href="#galeria">Galería</a>
+            <a href="#contacto">Contacto</a>
+        </nav>
+    </div>
+</header>
+
+
+<!-- ARTÍCULO -->
+<section class="block" id="articulo">
+    <h2>El Artículo del Día</h2>
+    <img src="imagenes/articulo.jpg" class="article-image">
+    <h3 class="article-title">Título del artículo del día</h3>
+    <p class="article-text">
+        Aquí puedes publicar un análisis, noticia o comunicado relevante de la Corporación.
+    </p>
+</section>
+
+
+<!-- QUIÉNES SOMOS -->
+<section class="block" id="quienes">
+    <h2>¿Quiénes Somos?</h2>
+    <p>
+        La Corporación La Guajira Post‑Carbón es un centro de pensamiento dedicado a apoyar 
+        el desarrollo del territorio en la etapa de transición posterior a la minería del carbón. 
+        Somos un referente técnico y de planeación para la reconversión, reactivación y 
+        sostenibilidad económica, social, cultural y ambiental del departamento.
+    </p>
+</section>
+
+
+<!-- VISIÓN -->
+<section class="block green" id="vision">
+    <h2>Visión</h2>
+    <p>
+        Para el año 2050 ser el referente de planeación más efectivo del departamento de La Guajira,
+        liderando la construcción de un nuevo esquema de desarrollo económico, social, ambiental y 
+        cultural, alineado con los Objetivos de Desarrollo Sostenible de la Agenda 2030.
+    </p>
+</section>
+
+
+<!-- MISIÓN -->
+<section class="block" id="mision">
+    <h2>Misión</h2>
+    <p>
+        Diseñar estratégicamente la planificación técnica y tecnológica que permita a las entidades 
+        gubernamentales construir e instrumentalizar el nuevo pensamiento del talento humano guajiro 
+        para gestionar la etapa post‑minería del carbón.
+    </p>
+    <p>
+        Apoyamos la reconversión laboral, la reactivación económica y la construcción del nuevo tejido 
+        social del departamento, siendo referente técnico y validador en procesos de desarrollo 
+        territorial.
+    </p>
+</section>
+
+
+<!-- OBJETIVOS -->
+<section class="block" id="objetivos">
+    <h2>Objetivos Corporativos</h2>
+
+    <h3>Objetivo #1</h3>
+    <p>
+        Conocer y analizar la planeación del cierre de mina definida por Cerrejón para apoyar su 
+        ejecución técnica, social y comunitariamente. Articular la gestión técnica con la planeación 
+        para el desarrollo territorial y ser aliado estratégico del gobierno regional en la transición 
+        post‑carbón.
+    </p>
+
+    <h3>Objetivo #2</h3>
+    <p>
+        Lograr un alto nivel de información, concientización y adherencia de la comunidad frente a la 
+        transformación social, económica, laboral y ambiental derivada del fin de la minería. Promover 
+        una transición productiva, sostenible y ordenada hacia la etapa post‑carbón.
+    </p>
+
+    <h3>Objetivo #3</h3>
+    <p>
+        Vincular a la Universidad de La Guajira como ente asesor y generador de conocimiento para 
+        desarrollar herramientas técnicas, sociales y científicas que respondan a los retos del cierre 
+        minero y la transformación del modelo económico.
+    </p>
+</section>
+
+
+<!-- GALERÍA / CARRUSEL -->
+<section class="block green" id="galeria">
+    <h2>Galería de Actividades</h2>
+    <p>Momentos destacados de reuniones, recorridos y actividades institucionales.</p>
+
+    <div class="carousel-container">
+        <div class="carousel-slide">
+            <img src="imagenes/f1.jpeg">
+            <img src="imagenes/f2.jpeg">
+            <img src="imagenes/f3.jpeg">
+            <img src="imagenes/f4.jpeg">
+            <img src="imagenes/f5.jpeg">
+            <img src="imagenes/f6.jpeg">
+            <img src="imagenes/f7.jpeg">
+        </div>
+
+        <button class="prev">&#10094;</button>
+        <button class="next">&#10095;</button>
+    </div>
+</section>
+
+
+<!-- CONTACTO -->
+<section class="block" id="contacto">
+    <h2>Contacto</h2>
+    <p>
+        Comunícate con la Corporación completando el siguiente formulario. 
+        Se abrirá tu correo con la información lista para enviar.
+    </p>
+
+    <form action="mailto:corporacionguajirapostcarbon@gmail.com"
+          method="POST" enctype="text/plain" class="contact-form">
+
+        <label>Nombre completo:</label>
+        <input type="text" name="Nombre" required>
+
+        <label>Correo electrónico:</label>
+        <input type="email" name="Email" required>
+
+        <label>Asunto:</label>
+        <input type="text" name="Asunto" required>
+
+        <label>Mensaje:</label>
+        <textarea name="Mensaje" rows="5" required></textarea>
+
+        <button type="submit" class="form-button">Enviar mensaje</button>
+    </form>
+</section>
+
+
+<footer class="footer">
+    <p>© 2025 Corporación Guajira Post‑Carbón — Todos los derechos reservados</p>
+</footer>
+
+
+<script>
+    /* NAVBAR */
+    const hamburger = document.getElementById("hamburger");
+    const navMenu = document.getElementById("navMenu");
+    hamburger.addEventListener("click", () => {
+        navMenu.classList.toggle("show");
+    });
+
+    /* CARRUSEL */
+    const slide = document.querySelector('.carousel-slide');
+    const images = document.querySelectorAll('.carousel-slide img');
+    let counter = 0;
+
+    function updateCarousel() {
+        slide.style.transform = 'translateX(' + (-counter * 100) + '%)';
+    }
+
+    document.querySelector('.next').onclick = () => {
+        counter = (counter + 1) % images.length;
+        updateCarousel();
+    };
+
+    document.querySelector('.prev').onclick = () => {
+        counter = (counter - 1 + images.length) % images.length;
+        updateCarousel();
+    };
+
+    setInterval(() => {
+        counter = (counter + 1) % images.length;
+        updateCarousel();
+    }, 4000);
+</script>
+
+</body>
+</html>
