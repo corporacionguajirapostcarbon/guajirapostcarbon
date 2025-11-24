@@ -30,32 +30,96 @@
     </div>
 </header>
 
+
+<!-- ARTÍCULO -->
+<section class="block" id="articulo"
+    style="
+        background:#ffffff;
+        padding:30px;
+        border-radius:14px;
+        box-shadow:0 4px 15px rgba(0,0,0,0.1);
+        max-width:900px;
+        margin:40px auto;
+        font-family: 'Poppins', sans-serif;
+    ">
+
+    <h2 style="
+        color:#1b5e20;
+        font-size:28px;
+        border-left:6px solid #1b5e20;
+        padding-left:12px;
+        margin-bottom:25px;
+    ">
+        El Artículo del Día
+    </h2>
+
+    <!-- TÍTULO DEL ARTÍCULO -->
+    <h3 id="titulo-articulo" style="
+        font-size:34px;
+        font-weight:700;
+        color:#1b5e20;
+        margin-bottom:20px;
+        background:#eef8f0;
+        padding:15px 20px;
+        border-radius:10px;
+    ">
+        Cargando título...
+    </h3>
+
+    <!-- CONTENIDO DEL ARTÍCULO -->
+    <div id="texto-articulo" style="
+        background:#f7f9f7;
+        padding:20px;
+        border-radius:10px;
+        font-size:20px;
+        line-height:1.7;
+        color:#333;
+        box-shadow: inset 0 0 10px rgba(0,0,0,0.06);
+        white-space:pre-line;
+    ">
+        Cargando texto del artículo...
+    </div>
+</section>
+
+<script>
+// CARGAR TÍTULO
+fetch("articulo_titulo.txt")
+    .then(res => res.text())
+    .then(txt => {
+        document.getElementById("titulo-articulo").textContent = txt;
+    })
+    .catch(() => {
+        document.getElementById("titulo-articulo").textContent = "No se encontró el título.";
+    });
+
+// CARGAR TEXTO
+fetch("articulo_texto.txt")
+    .then(res => res.text())
+    .then(txt => {
+        document.getElementById("texto-articulo").textContent = txt;
+    })
+    .catch(() => {
+        document.getElementById("texto-articulo").textContent = "No se encontró el artículo.";
+    });
+</script>
+
+
+
+
 <!-- NOTICIAS -->
 <section class="block" id="noticias">
     <h2>Noticias</h2>
-    <img src="imagenes/noticias.jpg" class="article-image">
+    <img src="imagenes/noticias/noticias.jpg" class="article-image">
     <h3 class="article-title">Título de la noticia del día</h3>
     <p class="article-text">
         Aquí puedes publicar un análisis, noticia o comunicado relevante de la Corporación.
     </p>
 </section>
 
-
-<!-- ARTÍCULO -->
-<section class="block" id="articulo">
-    <h2>El Artículo del Día</h2>
-    <img src="imagenes/articulo.jpg" class="article-image">
-    <h3 class="article-title">Título del artículo del día</h3>
-    <p class="article-text">
-        Aquí puedes publicar un análisis, noticia o comunicado relevante de la Corporación.
-    </p>
-</section>
-
-
 <!-- ACTIVIDADES -->
 <section class="block" id="actividades">
     <h2>Actividades</h2>
-    <img src="imagenes/actividades.jpg" class="article-image">
+    <img src="imagenes/actividades/actividades.jpg" class="article-image">
     <h3 class="article-title">Título de las actividades</h3>
     <p class="article-text">
         Aquí puedes publicar un análisis, noticia o comunicado relevante de la Corporación.
@@ -66,7 +130,7 @@
 <!-- PROGRAMACION -->
 <section class="block" id="programacion">
     <h2>Programacion</h2>
-    <img src="imagenes/programacion.jpg" class="article-image">
+    <img src="imagenes/programacion/programacion.jpg" class="article-image">
     <h3 class="article-title">Título de la programacion</h3>
     <p class="article-text">
         Aquí puedes publicar la programacion de la Corporación.
@@ -148,13 +212,13 @@
 
     <div class="carousel-container">
         <div class="carousel-slide">
-            <img src="imagenes/f1.jpeg">
-            <img src="imagenes/f2.jpeg">
-            <img src="imagenes/f3.jpeg">
-            <img src="imagenes/f4.jpeg">
-            <img src="imagenes/f5.jpeg">
-            <img src="imagenes/f6.jpeg">
-            <img src="imagenes/f7.jpeg">
+            <img src="imagenes/galeria/f1.jpeg">
+            <img src="imagenes/galeria/f2.jpeg">
+            <img src="imagenes/galeria/f3.jpeg">
+            <img src="imagenes/galeria/f4.jpeg">
+            <img src="imagenes/galeria/f5.jpeg">
+            <img src="imagenes/galeria/f6.jpeg">
+            <img src="imagenes/galeria/f7.jpeg">
         </div>
 
         <button class="prev">&#10094;</button>
